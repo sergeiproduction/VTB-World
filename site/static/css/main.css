@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+/* Переменные */
+:root {
+    /* base colors */
+    --white: #FFFFFF;
+    --light-gray: #F2F2F2;
+    --grey: #E6E6E6;
+    --dark-grey: #999999;
+    --brand-color: #121542;
+    --online-color: #39b54a;
+    --common-color: #29abe2;
+    --rare-color: #fbb03b;
+    --epic-color: #662d91;
+    --legendary-color: #ed1c24;
+
+    /* text colors */
+    --main-text: #1A1A1A;
+    --background-text: #575757;
+
+    /* sizes */
+    --sizeindex: calc(1vw + 1vh);
+    --size-5: 7px;
+    --size-4: 14px;
+    --size-3: 28px;
+    --size-2: 42px;
+    --size-1: 56px;
+    --page-width: 75%; /* 960px */
+    --radius: 10px;
+    --block-size: 400px;
+    --block-radius: calc(var(--block-size) / 10);
+
+    /* font-weight */
+    --font-regular: 400;
+    --font-medium: 600;
+
+    /* font-size */
+    --standart: 11pt;
+    --small: 10pt;
+}
+
+/* Элементы */
+body {
+    min-width: calc(var(--block-size) * 2 + var(--size-3) * 2);
+}
+
+footer {
+    background-color: var(--brand-color);
+    height: var(--size-1);
+}
+
+/* Шрифты */
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: var(--font-regular);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-weight: var(--font-medium);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 18px;
+}
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-grey);
+    background-clip: content-box;
+    
+    border-radius: 12px;
+    border: 4px solid transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    background-clip: content-box;
+    
+    border-radius: 12px;
+    border: 4px solid transparent;
+}
+
+/* Шапка */
+.header {
+    background-color: var(--brand-color);
+    height: var(--size-1);
+}
+
+.header-logo a svg{
+    height: var(--size-3);
+    margin-top: var(--size-4);
+}
+
+/* Подложка страницы */
+.page-layout {
+    padding: 0px 10px;
+    margin: 0 auto;
+    min-width: calc(var(--block-size) * 2 + var(--size-3) * 2);
+}
+
+/* Главный блок */
+.body-block-main {
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px #cecece;
+
+    margin: var(--size-3);
+    padding: var(--size-3);
+    height: var(--block-size);
+    width: calc(var(--block-size) * 2 + var(--size-3) * 2);
+
+    border-radius: var(--block-radius);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.block-avatar {
+    height: calc(var(--block-size) * 0.7);
+    border-radius: var(--size-3);
+}
+
+.block-main-head {
+    display: inline-block;
+}
+
+.block-main-body {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: var(--size-4);
+    margin-left: var(--size-4);
+}
+
+.main-body-name {
+    font-family: Montserrat;
+    font-weight: var(--font-medium);
+    color: var(--main-text);
+}
+
+.main-body-tasks {
+    font-family: Montserrat;
+    font-weight: var(--font-regular);
+    color: var(--background-text);
+
+    margin-top: var(--size-5);
+}
+
+/* Блок с заданиями */
+.body-block {
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px #cecece;
+
+    margin: var(--size-3);
+    padding: var(--size-3);
+    height: var(--block-size);
+    width: var(--block-size);
+    
+    border-radius: var(--block-radius);
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.block-header {
+    font-family: Montserrat;
+    font-weight: var(--font-medium);
+    color: var(--main-text);
+}
+
+.block-text {
+    margin-top: var(--size-4);
+    font-size: var(--small);
+
+    font-family: Montserrat;
+    font-weight: var(--font-regular);
+    color: var(--background-text);
+
+    flex-grow: 1;
+}
+
+.block-buttons {
+    float: right;
+    text-align: right;
+}
+
+.block-about {
+    background-color: var(--light-gray);
+    color: var(--main-text);
+    padding: var(--size-5);
+
+    border: none;
+    font-family: Montserrat;
+    border-radius: var(--size-5);
+}
+
+.block-about:hover {
+    cursor: pointer;
+}
+
+.block-apply {
+    background-color: var(--brand-color);
+    color: var(--white);
+    padding: var(--size-5);
+    margin-left: var(--size-5);
+
+    border: none;
+    font-family: Montserrat;
+    border-radius: var(--size-5);
+}
+
+.block-apply:hover {
+    cursor: pointer;
+}
