@@ -7,5 +7,3 @@ Open CMD in folder api
 Enter  .\venv\Scripts\activate
 
 Enter uvicorn main:app --reload
-
-Use it
