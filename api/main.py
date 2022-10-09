@@ -200,7 +200,6 @@ def create_wallet(wallet: WalletORM):
         user_id = wallet.user_id
     )
 
-
     db.add(wallet)
     db.commit()
     db.refresh(wallet)
